@@ -1,0 +1,419 @@
+Priya Chanduri added Gazala Alvi to the chat.Priya Chanduri added Rohan Abhay Dharmadhikari to the chat.Priya Chanduri added Holly Dianne Irvine to the chat.Priya Chanduri added Darrell Robert Sanson to the chat. 
+ 
+Hello Everyone, I've created this group to communicate about the Big data analytics assignments for Data Ninja 7 group 
+ 
+ I am available for working on the assignments during Monday to Friday anytime 7 pm (CST) 
+ 
+Priya Chanduri changed the group name to BigData Analytics - Data Ninja 7. 
+ 
+Thanks and look forward to working with you all
+ Thanks for setting this up, Priya! I live in Eastern Europe (7 hours ahead of East coast time/8 hours ahead of CST), so could do late night/early morning CST if we need to do Teams calls. Or synchronous work in general 
+Lab: Navigating through GCP
+Learning Objectives:
+Understand the basics of navigating Google Cloud Platform (GCP) using the console.
+Learn how to manage projects, billing, and access control in GCP.
+Gain experience with creating and managing virtual machines and cloud storage.
+Tasks:
+Create a Gmail account for the course.
+Redeem Google Cloud Credits.
+Navigate the Cloud Console & Cloud Shell.
+Set up a Project in GCP.
+Set Billing Budgets & Alerts in GCP.
+Add an IAM User & Assign Various Roles.
+Create & Connect Linux VM Instances in GCP.
+Manage VMs using CLI & Cloud Shell.
+Create a Bucket and Upload Objects.
+Move Objects Between Cloud Storage Buckets.
+Administer your Billing account in GCP.
+ 
+ this is week one. 
+ 
+I'm good at writing SQL code and creating Power bi reports. the backend data on how its stored and piped in has been something I've always wanted to learn. My company uses Azure so hopefully there will be cross over using GCP 
+ 
+Darrell Robert Sanson
+Lab: Navigating through GCPLearning Objectives:Understand the basics of navigating Google Cloud Platform (GCP) using the console.Learn how to manage projects, billing, and access control in GCP.Gain experience with creating and managing virtual machines and cloud storage.Tasks:Create a Gmail accoun…
+This is individual work, right? In preparation for the team assignment?
+yea, sorry
+ 
+No worries. I'm very very confused about what's due and when for this class.
+ 
+it looks like week one is setting up everything you need
+ 
+I started stepping through Lab 1 but don't see a git repo link anywhere. Anyone else find it?
+ 
+Screenshot 2025-06-30 152627.png
+ 
+I think its in the cloud editer 
+ 
+Assignment 1: Team Collaborative Analysis - Due
+Jul 18, 2025 11:59 PM
+Summer 2025 MGMT 59000-DY2-025 - Merge
+Assignment 1: Team Collaborative Analysis
+Using Cloud Data Lakes for Business Intelligence
+Assignment Overview
+Working in teams of 3-4, you will perform a collaborative analysis of the Superstore dataset using the cloud infrastructure you built in Lab 1. Each team member will apply the DIVE method to a specific business area, then synthesize findings into actionable recommendations.
+Type: Team Assignment
+Weight: 15% of final grade
+Submission: One per team via D2L
+ 
+fyi
+ 
+anyone able to crack the following step ? 
+ 
+Fork the course repository: [URL to be provided] in  Lab 1.2 ??
+ 
+trying to find URL that I need to use for froking 
+ 
+I emailed the prof and TA and came up empty. I did find this, but I’m not 100% sure it’s the right link
+
+https://github.com/bigdataonline/edu.purdue.krannert.bigdata
+GitHub - bigdataonline/edu.purdue.krannert.bigdata: Code for assignments, labs, and demos for MGMT 590 Big Data.
+Code for assignments, labs, and demos for MGMT 590 Big Data. - bigdataonline/edu.purdue.krannert.bigdata
+ But basically, there’s nothing to turn in for Lab 1, so he said don’t worry about it, just get your accounts set up 
+I created a project in github and sent everyone an invite. crossing fingers
+ Hmm I don’t see the invite Darrell I’m on vacation this weekend and plan to take a look at the assignment on Monday 
+Just couple of videos 
+ 
+Right? 
+ 
+Our assignment #1 is due on July 18th
+ 
+
+ 
+Priya Chanduri
+Are you able to find the data files that we need to use to upload into S3 bucket ?
+Sorry, I'm not sure what you mean by S3 bucket
+ 
+If you mean for Assignment 1, the TA uploaded the Superstore data in the announcements section for the class. I believe that's the data we all should be using for this assignment.
+ 
+I was asking part of Lab 1 bu t Aastha posted the data files already in the bright space. I am good on this topic. 
+ 
+If you're all ok with it, I would like to take the role of Member T, Product Performance Analyst, for our 1st team assignment
+ 
+
+Highlighting the due dates for our two group projects, in case anyone else is finding it challenging to navigate the information in Brightspace
+ 
+Did anyone see the quiz yet 
+ 
+I only saw unit 1 quiz practice 
+ 
+Gazala Alvi
+Did anyone see the quiz yet
+He said in the synchronous session (posted on brightspace) that it will be open Friday-Sunday this week 
+ 
+So assuming there are no actual homework discussions nor quiz to take as of today right week1
+ 
+How about discussions? Anything due tonight? I am still trying to catch up with week 1
+ 
+Gazala Alvi
+How about discussions? Anything due tonight? I am still trying to catch up with week 1
+Take a look at the screenshot I sent above. That details what's actually due each week. It's under Session 0: Start Here 
+ 
+FYI, I was in the zoom meeting with the teacher and he basically confirmed we should be working on Lab 1 and lab1 assignment. Also doing the Quiz 1 preparation prompts. I made the mistake of going through the course content lectures taking detailed notes which seems to be a waste of time
+ 
+he said - do each step on the quiz preparation along with the labs and you'll be ready for the quiz and team project due next week
+ 
+Does anyone use Claude AI? I'm finding it super helpful for the Quiz preparation prompts because it shows me its thinking (detailed) on half the screen, then gives key takeaways in the other half, so i can deep-dive on any topics or calculations it's researching for me
+ 
+-- Run this in BigQuery to verify data loaded correctly
+SELECT
+  COUNT(*) as total_rows,
+  COUNT(DISTINCT CustomerID) as unique_customers,
+  MIN(OrderDate) as earliest_order,
+  MAX(OrderDate) as latest_order
+FROM `Lab1_eda2.Super_Store`;
+ 
+if you're having issues with column names erroring out in SQL its because there is a space causing issues. its bad meta data to have column headers like Customer ID. take the space out in the CSV file and import it in the bucket
+ 
+
+ 
+Task 2.2: Verify Your Data Lake
+After completing the Scribd tutorial, verify your setup:
+-- Run this in BigQuery to verify data loaded correctly
+SELECT 
+  COUNT(*) as total_rows,
+  COUNT(DISTINCT Customer_ID) as unique_customers,
+  MIN(Order_Date) as earliest_order,
+  MAX(Order_Date) as latest_order
+FROM `your-project.your_dataset.superstore_sales`;
+Expected results:
+Total rows: ~9,994
+Date range: 2020-2023
+ when can we meet to go over this?
+ I think I had asked before to take Member T. Between 1-4 pm eastern works best for me, but I can also do late night eastern/early am for me 
+Member A = Darrell , Member B = "Open", Member T = Holly, Member D = "Open"
+ 
+I have meetings in New Orleans Monday and Tuesday, but wednesday - sunday I can make it
+ We have 5 people in our group, though. Rohan and Gazala also need roles 
+my suggestion is everyone play to their strenght. 4 people pick a role and the 5th person takes everyones analysis and does the summarys 
+ 
+Executive Summary (1 page)
+ 
+Integrated Analysis (2-3 pages)
+ 
+Strategic Recommendations (1-2 pages)
+ 
+5 specific, actionable recommendations
+Implementation timeline (30-60-90 days)
+Success metrics for each recommendation
+Team Presentation (5 slides + 3-minute video)
+ 
+Problem statement
+Key findings from each analyst
+Integrated insights
+Top 3 recommendations
+Expected impact
+ 
+the summary work seems like a lot but if we take the everyones analysis, drop it into gemini or any Ai tool it will summarize it pretty fast
+ 
+Again, this is me making suggestions 
+ 
+
+ 
+I connected big Query to Power bi which makes telling the story a lot easier 
+ 
+I shall take Member B. 
+ 
+Should we meet once tonight or tomorrow night to quickly connect on the expectations ? Does 7 pm CST work for everyone ??
+ 
+Member A = Darrell , Member B = "Priya", Member T = Holly, Member D = "Open"
+ Tomorrow night works better for me, personally 
+I apologize, I'm not going to be able attend the meeting tonight. I have a work dinner during that time. can we reschedule tomorrow or wednesday?
+ I will also not be able to make the meeting tonight. That is unfortunately 3 am my time. 
+Let's connect via chat for now then. I shall cancel tonight's meeting. I shall plan to bring work on above deliverables for member B
+ 
+Sorry I have dropped this class. So I will not be joining 
+ 
+it looks like the due date for assignment 1 changed from 18 July to 20 July, is that right?
+ 
+I sent an alternative meeting invite for later today, hopefully that works for folks to get us started on this assignment
+ 
+Here is a shared Google Drive folder for our team: https://drive.google.com/drive/folders/1y_LbZziZDfrNoLyYGIJkIa6Oa5Ex8ZNt?usp=share_link
+MGMT590-Data Ninja 7 - Google Drive
+ 
+How do we want to divvy up the team synthesis part? I suspect for the team presentation, we are each expected to speak
+ 
+
+ Did you all meet yesterday? I did not see the meeting message until now. 
+ 
+Can you please share the meeting summary and if there are any action items for each team member?
+ Hey Priya, only Darrell called in so we didn’t really discuss anything beyond the fact that we have the above deliverables. Is there a better way to communicate with each other rather than Teams, so we can be sure we’re collaborating effectively? I was hoping to finish this before Friday night so we have time to make final edits before it’s due on Sunday. 
+I am usually available after 7 pm CST ( for about 4-5 hours) starting tomorrow, Thursday, 07/17. I will be travelling back to Chicago later today but if you let me know the time, I can make myself available for the call. 
+ 
+can y'all get into Brightspace?
+ 
+I keep getting an error
+ 
+Darrell Robert Sanson
+can y'all get into Brightspace?
+No issues here
+ 
+Priya Chanduri
+I am usually available after 7 pm CST ( for about 4-5 hours) starting tomorrow, Thursday, 07/17. I will be travelling back to Chicago later today but if you let me know the time, I can make myself available for the call.
+What about 10 or 11 pm CST? That is 6 or 7 am for me and is manageable. Would that work for y'all Darrell Robert Sanson and Rohan Abhay Dharmadhikari?
+ 
+I'm available for both 10 or 11 
+ 
+Gazala Alvi left the chat. 
+ That will work for me 
+10 PM CST would work for me. Will it Thursday (07/17) ??
+ 
+Meeting invite sent
+ 
+thank you 
+ 
+SuperStore 1.pbix
+ 
+
+ 
+I've done the analysis and summary. its alot so we can cut it down for the final lab submittal 
+ 
+hey Holly, we met and discussed the project and we want to meet on Saturday and go over what each of us are working on, our role summaries, pushing code up to github and the group summary and presentations needing to be done. Are you available this weekend so we can go over these tasks? 
+ I’m so sorry guys, I slept right through my alarm 😬 yes, I can definitely meet Saturday 
+I've uploaded 1. code 2. DIVE report and 3. Executive summary for the customer behavior analyst at the group chat that Holly created MGMT590-Data Ninja 7 - Google Drive. This finishes all the homework except GIThub checking in 
+
+MGMT590-Data Ninja 7 - Google Drive
+ 
+Can you please correct me the our next meeting time ?
+ 
+Priya Chanduri
+I've uploaded 1. code 2. DIVE report and 3. Executive summary for the customer behavior analyst at the group chat that Holly created MGMT590-Data Ninja 7 - Google Drive. This finishes all the homework except GIThub checking in 📷
+We still need to write the full summary that integrates all our parts and create a 3 minute video presentation too
+ 
+I'm hoping to finish my individual part tonight as well
+ 
+Priya Chanduri
+Can you please correct me the our next meeting time ?
+I need this info as well. Are we meeting tomorrow?
+ 
+Per the instructions, we're supposed to have a group Google Drive folder. I've created one for us (sent it previously) and have added my ipynb. I will add my summary write-up, visualizations, and gemini prompts when I'm done as well. 
+ 
+Wow Holly, your submittal is awesome!
+ 
+Great job
+ 
+Darrell Robert Sanson
+Wow Holly, your submittal is awesome!
+wait, which part? I only have my colab notebook in there so far. Everything else in that folder is Priya Chanduri's!
+ 
+Hey all, I created a slimmed down assignment instructions document that cuts it down to the specific requirements and checklists to make it easier to see what documents are required and the submission process. Sharing it here in case anyone else found the original instructions confusing or difficult to navigate.
+Assignment Requirements.docx
+ 
+Holly Dianne Irvine
+wait, which part? I only have my colab notebook in there so far. Everything else in that folder is Priya Chanduri's!
+Oh whoever wrote the python and SQL code did a great job! very clean and detailed 
+ 
+Holly Dianne Irvine
+I need this info as well. Are we meeting tomorrow?
+10 am (CST) tomorrow, 07/19 works for everyone ?
+ 
+Darrell Robert Sanson
+Oh whoever wrote the python and SQL code did a great job! very clean and detailed
+I have fully used gemini for the DIVE and coding effort. Please let me know if I should produce note book for the remaining analysts too including yours too to keep it consistent with ours ? You  n Rohan can team synthesis, github check in and submission 
+ 
+Both Holly and I used Gemini for the analysis 
+ 
+Priya Chanduri
+10 am (CST) tomorrow, 07/19 works for everyone ?
+Yes, that should work for me, thank you. The time Darrell proposed is ok but not great for me.
+ 
+Priya Chanduri
+I have fully used gemini for the DIVE and coding effort. Please let me know if I should produce note book for the remaining analysts too including yours too to keep it consistant with ours ?
+It looks like we each should have our own notebook submitted as part of the total package.
+ 
+
+ 
+I can produce the code and they can copy into their note book and upload into git. Just a thought.. I am ok with whatever works for everyoen 
+ 
+My part is fully uploaded to the share folder now. Is someone planning to create a team git? if not, I can do that in the morning.
+ 
+I shall try to create the team git and keep you all posted on the status 
+ 
+I couldn't find the instructions for the team git repo creation. I have sent an note to TA asking for help on it 
+ 
+
+ 
+Rohan Abhay Dharmadhikari and everyone else, we met today to go over the final parts of our project:
+Discussed the team GitHub (Holly will set up)
+Went over how to load files into the team Google Drive folder
+Agreed to submit the chat log from our Teams chat as our meeting minutes
+Assigned tasks for the team portion:
+Priya: 
+Draft Executive Summary
+Draft Strategic Recommendations (request for everyone to provide feedback)
+Holly: 
+Organize Google Drive
+Create GitHub repository
+Draft Integrated Analysis Report
+Darrell: 
+Create presentation slides
+Compile prompts log
+Rohan: 
+Record presentation video and upload to YouTube
+Submit everything to Brightspace
+Everyone: 
+Send 3-5 key points to Darrell for the presentation
+Read and provide feedback on all parts by 12 pm CST Sunday
+Discussed kick off for the next assignment
+Plan to meet on Wednesday, 23 July, at 0800 CST for a 30-minute kickoff
+Overview of assignment
+Set deadline for individual pieces
+Assign roles
+Rohan Abhay Dharmadhikari, Priya Chanduri please send Darrell 3-5 key takeaways from your portions ASAP to help him create the presentation slides
+ 
+Rohan Abhay Dharmadhikari please take note of your tasks for the team portion of this assignment and also please submit your individual portions to the Google Drive ASAP to help with creating the rest of the team submission
+ 
+New folder structure for Assignment 1 WITHIN our shared folder. Please drop you DIVE analysis reports in the MGMT590-Data Ninja 7 folder to help with drafting the integrated report and executive summary. Place other files that require submission in the appropriate folder in Team_DataNinja7_Assignment1 folder, following the file structure in the assignment directions
+ 
+https://drive.google.com/drive/folders/1k4O-IC_ZXZ6LZNdh2v3XQWUKNGOTvBMD?usp=sharing
+Team_DataNinja7_Assignment1 – Google Drive
+ 
+I have uploaded both key take aways and prompt log in the supporting material folder 
+
+ 
+Rohan Abhay Dharmadhikari, can you please share your notebook and summary sheet so that I can finish the executive summary ?
+ Hey Team, sorry for missing the meeting, just woke up this morning, I will be sharing by EOD 
+Rohan Abhay Dharmadhikari, I’m hoping to finish the executive summary and strategic summary in the next 2–3 hours and share it with you all for review. If you’d like to take until the end of the day, could you please include your part of the summary as well?
+ 
+Everyone, can you please review the executive summary document located at the team folder ( https://docs.google.com/document/d/12ThWlNtxEPm2wCD-26d4Uklc-o-2Yfu3/edit?usp=drive_link&ouid=103875486154946081193&rtpof=true&sd=true) ? Please feel free to edit the document as needed. Rohan Abhay Dharmadhikari,  it doesn't cover your work. Please plan to include your analysis results into the document when you're ready. 
+Loading Google Docs
+ 
+Priya Chanduri I'm moving your key takeaways back to the main team folder, since that document doesn't need to be submitted but is needed to create the final products
+ 
+I will be ready with strategic recommendations shortly, should I place it in the team deliverables along with the exec summary ??
+ 
+yes, please!
+ 
+
+ Darrell Robert Sanson
+I'm confused, the data I got was between 2014 - 2018/
+oh no! Aasta posted this link after she posted the older data: https://www.kaggle.com/datasets/timchant/supstore-dataset-2019-2022
+SuperStore Dataset 2019-2022 | Kaggle
+USA Online Retail Store
+ 
+Priya Chanduri
+Everyone, can you please review the executive summary document located at the team folder ( https://docs.google.com/document/d/12ThWlNtxEPm2wCD-26d4Uklc-o-2Yfu3/edit?usp=drive_link&ouid=103875486154946081193&rtpof=true&sd=true) ? Please feel free to edit the document as needed. Rohan Abhay
+Looks good. I added one minor clarifier.
+ 
+I'm not redoing this work soooo yea
+ 
+Everyone, Strategic recommendation draft is ready for review :Rohan Abhay Dharmadhikari, It doesn't contain your content yet  https://docs.google.com/document/d/1Hts10b7U_LWrEflaqZLVWQQVz8t28La5/edit?usp=drive_link&ouid=103875486154946081193&rtpof=true&sd=true
+Strategic_recommendations.docx - Google Docs
+These recommendations aim to enhance profitability, streamline operations, and build a customer-centric growth strategy, positioning the company for long-term success in a competitive retail enviro...
+ 
+I am reviewing it now
+ 
+all my summaries are wrong and have to be redone 
+ 
+I finished all tasks that were assigned to me. I will be working on another course's homework for the rest of the day today and will be checking the messages here periodically. Please feel free to let me know if you have any questions. 
+ 
+Is the github link shared yet?
+ 
+Rohan Abhay Dharmadhikari
+Is the github link shared yet?
+Yes, I sent an email earlier that included all the links
+ 
+Let me know if you have any trouble viewing any of the folders or the github
+ 
+Hey Team, I just realized I do not have the bandwidth to complete this assignment today as well as subsequent assignments. I have just requested to drop this class and am awaiting approvals from my advisor. Apologies for such short notice, but I will be unable to complete this. I will also be sending an email to the instructor informing them of my decision. Best of luck
+ 
+Rohan Abhay Dharmadhikari left the chat. 
+ 
+wow .. that's a sudden surprise. I can take care of Rohan's Dive analysis and edit the executive summary and recommendations to include Rohan's part by eod today i.e after finishing my other course work first. Can one of you take care of the other stuff ?
+ 
+ 
+
+ 
+ 
+i'll do the presentation 
+ 
+I'll take care of getting things uploaded. Priya, thanks for taking that on. Let me know if you want any help.
+ 
+I'm working on a project for another class right now, too, but can help pick up the slack on this
+ 
+im redoing mine based on the 2019 - 2023 table
+ 
+i'll work all day on it and pick up the slack when i got mine updated 
+ 
+Hey all, I'm heading to bed. I'll have a couple hours in the morning that I can work on anything that needs attention. The deadline is 7 am Monday morning for me, so ideally I would have all of the components by 3 pm CST tomorrow so I have time to push everything out before I go to bed.
+ 
+I did Regional Operations Analyst Part. if someone tomorrow help with the presentation and anything left. I'm not real good with Power Point TBH
+ 
+Finally finished the Rohan's work. I have uploaded the following documents. 
+ 
+For Product Performance Analyst:
+Prompt log
+DIVE report
+Analysis notebook
+Visualization Notebook
+full Executive report
+full Strategic Report
+ 
+ 
+I still need to finish my other course homework which is due tomorrow. After reviewing the doc's, if you both are ok, please go ahead and submit this assignment. I have worked for more than 16 hours today and super exhausted and wouldn't be able take any additional responsivities for this assignment. 
+ 
+Hey Priya, I'm taking a look at the executive summary and it's super long. It seems to also include the integrated analysis which should be a separate document. Do you mind if I spend some time this afternoon re-doing the executive summary to bring it down to a 2-pager (like the original version you shared)
+ 
+I also think I like the original strategic recommendations document better than the "full" document
+ 
+ 

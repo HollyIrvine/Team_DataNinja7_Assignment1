@@ -323,7 +323,7 @@ Required Analysis:
 Regional performance metrics
 Shipping and operational efficiency
 Market opportunity identification
-Priya Chanduri – Performance Analyst
+Priya Chanduri – Customer Behavior  Analyst
 Initial Setup and Connection:
 "Set up a connection to Google BigQuery using the google-cloud-bigquery library in Python. Initialize the client with a specified project ID." 
 "Show me how to configure the BigQuery client with a project ID and location, and enable the data_table formatter for displaying DataFrames." 
